@@ -1,0 +1,12 @@
+# Never keep SAME names the both L.H.S (Name which will be used in the python code) and R.H.S (Table name created in the DB)
+Staging_Mesh = 'Db_Mesh_Stats'
+Staging_Table_Ext_Aero = 'Ext_Aero_Simulation_Metrics'
+Staging_Table_Cummulative = 'Ext_Aero_Cumulated'
+Staging_Table_Residuals = 'Ext_Aero_Residuals'
+Staging_Table_head_Pr_pulse = 'Ext_Aero_Head_Pr_Pulse'
+Staging_Parameters = 'Db_Parameters'
+Table_Flag = 'Db_Tags'
+Staging_Aero_CFx = 'Ext_Aero_CFx'
+Staging_Aero_CFz = 'Ext_Aero_CFz'
+tab_usr = 'Db_user_name'
+table_elapse = 'Db_Elapse_Time'

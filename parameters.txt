@@ -1,0 +1,32 @@
+PROJECT_CODE:			DB-TEST
+TASK_CODE:			EQU
+DESCRIPTION:			check5             
+SOLVER_VERSION:			18.06.007-Mixed
+QUEUE:				aerox
+WALLTIME:			01:00:00
+WORKFLOW_STEPS:			RUN
+SIM_FILE:			PRD2425MT-RTM-166.sim
+TEMPLATE:			ext-aero-v3.2-2310
+#ITERATOR:			
+
+# How To Use 	
+# 
+# The list of parameter will change depending on the steps chosen for WORKFLOW_STEPS. 
+# If WORKFLOW_STEPS = ALL or contains PRE and/or POST, TEMPLATE_REFERENCE is needed.  
+# If WORKFLOW_STEPS = RUN and/or POST only, the parameter SIM_FILE is needed. 
+
+# Available SOLVER_VERSIONS ->  
+# 2019.3_14.06-Mixed-Official
+# 2019.3_14.06-Double-Specific
+# 13.06.012-MIXED.NotValidated
+# 13.06.012-DOUBLE.NotValidated
+
+# Available QUEUE -> 
+# normal
+# aerox 
+
+# Available TEMPLATE_REFERENCE -> 
+# crossing_ref
+# drag_ref
+# drag_panto 
+# climatic_comfort

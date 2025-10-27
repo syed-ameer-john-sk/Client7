@@ -1,0 +1,40 @@
+PROJECT_CODE:	    {project_to_clean}		
+RUN_NUMBER:			{run_number_to_clean}
+DESCRIPTION:			 
+SOLVER_VERSION:		18.06.007-Mixed
+QUEUE:			    aerox
+WALLTIME:		    00:30:00
+WORKFLOW_STEPS:		{workflow_step}
+SIM_FILE:		    {sim_to_clean}
+TEMPLATE:		    cleanup_template
+#ITERATOR: 10
+
+# How To Use 	
+# 
+# All parameters are mandatory except for SIM_FILE and ITERATOR which are needed in the following cases only: 
+# Case 1: RUN and/or POST jobs starting from a folder in the user's /home directory
+#			SIM_FILE= simulation file to run. 
+# Case 2: RUN job with a different maximum step value than that of the template
+#			ITERATOR= the new maximum steps value. 
+# Case 3: RUN job starting from an existing RUN folder
+#			SIM_FILE= name of the existing simulation in the RUN folder. 
+#			ITERATOR= the new maximum steps value.  
+
+# Available SOLVER_VERSIONS ->  
+# 15.06-008-Mixed (2020 version to use)
+# 15.06-008-Double
+# 2019.3_14.06-Mixed-Official
+# 2019.3_14.06-Double-Specific
+# 13.06.012-MIXED.NotValidated
+# 13.06.012-DOUBLE.NotValidated
+
+# Available QUEUE -> The selected queue will be used for all steps
+# normal
+# aerox 
+
+# Available TEMPLATE_REFERENCE -> 
+# climatic_comfort_cabin
+# climatic_comfort_saloon
+# rtm
+# default_template (to run a simulation for which a template does not exist, only valid for a RUN step)
+# cleanup_template (to cleanup a meshed sim file, only valid for a RUN step, usefull for the cleanup.py script only)
