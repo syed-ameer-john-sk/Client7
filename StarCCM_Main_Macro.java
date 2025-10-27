@@ -60,9 +60,21 @@ public class StarCCM_Main_Macro extends StarMacro {
     }
 
     public void startPost(File post_macro) {
+        String paramPath = simulation.getSessionDir() + "/" + "parameters.txt";
+        HashMap<String, String> parameters = readParameters(paramPath);
+        String value = parameters.get("iterator");
+        if (value != null) {
+            StepStoppingCriterion stoppingCriterion = ((StepStoppingCriterion) simulation
+                    .getSolverStoppingCriterionManager()
+                    .getSolverStoppingCriterion("Maximum Steps"));
+            stoppingCriterion.setMaximumNumberSteps(Integer.parseInt(value));
+        }
         Boolean isError = startScript(post_macro);
         simulation.println("POST");
-        if (isError) {
+        if (!isError) {
+            saveSim();
+            createSymlink();
+        } else {
             createFailed();
         }
     }
